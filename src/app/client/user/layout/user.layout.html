@@ -1,0 +1,77 @@
+<!-- SECTION HEADLINE -->
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>My Dashboard</h2>
+        <p>Home<span class="separator">/</span><span class="current-section">My Dashboard</span></p>
+    </div>
+</div>
+<!-- /SECTION HEADLINE -->
+
+<!-- AUTHOR PROFILE BANNER -->
+<div class="author-profile-banner"></div>
+<!-- /AUTHOR PROFILE BANNER -->
+
+<!-- AUTHOR PROFILE META -->
+<div class="author-profile-meta-wrap">
+    <div class="author-profile-meta">
+        <!-- AUTHOR PROFILE INFO -->
+        <div class="author-profile-info">
+            <!-- AUTHOR PROFILE INFO ITEM -->
+            <div class="author-profile-info-item">
+                <p class="text-header">Member Since:</p>
+                <p>January 01, 2018</p>
+            </div>
+            <!-- /AUTHOR PROFILE INFO ITEM -->
+
+            <!-- AUTHOR PROFILE INFO ITEM -->
+            <div class="author-profile-info-item">
+                <p class="text-header">Tours Available:</p>
+                <p>5000</p>
+            </div>
+            <!-- /AUTHOR PROFILE INFO ITEM -->
+
+            <!-- AUTHOR PROFILE INFO ITEM -->
+            <div class="author-profile-info-item">
+                <p class="text-header">Website:</p>
+                <p><a href="#" class="primary">www.klook.com</a></p>
+            </div>
+            <!-- /AUTHOR PROFILE INFO ITEM -->
+        </div>
+        <!-- /AUTHOR PROFILE INFO -->
+    </div>
+</div>
+<!-- /AUTHOR PROFILE META -->
+
+<!-- SECTION -->
+<div class="section-wrap">
+    <div class="section overflowable">
+        <!-- SIDEBAR -->
+        <div class="sidebar left author-profile">
+            <!-- SIDEBAR ITEM -->
+            <div class="sidebar-item author-bio">
+                <!-- USER AVATAR -->
+                <a href="user-profile.html" class="user-avatar-wrap medium">
+                    <figure class="user-avatar medium">
+                        <img src="assets/images/profile/klook.png" alt="">
+                    </figure>
+                </a>
+                <!-- /USER AVATAR -->
+                <p class="text-header">Klook</p>
+                <p class="text-oneline">5,000 Tours | 15,000 Likes</p>
+                <a routerLink="/merchant" class="button mid tz-green spaced">My Merchant Profile</a>
+            </div>
+            <!-- /SIDEBAR ITEM -->
+
+            <!-- MENU ITEM-->
+            <app-user-menu></app-user-menu>
+            <!-- /MENU ITEM -->
+
+        </div>
+        <!-- /SIDEBAR -->
+
+        <router-outlet></router-outlet>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- /SECTION -->

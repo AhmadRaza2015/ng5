@@ -1,0 +1,251 @@
+<!-- SECTION HEADLINE -->
+<div class="section-headline-wrap">
+    <div class="section-headline">
+        <h2>Checkout</h2>
+    </div>
+</div>
+<!-- /SECTION HEADLINE -->
+
+<!-- SECTION -->
+<div class="section-wrap">
+    <div class="section">
+        <!-- FORM BOX ITEMS -->
+        <div class="form-box-items">
+            <!-- FORM BOX ITEM -->
+            <div class="form-box-item checkout">
+                <h4>Billing Information</h4>
+                <hr class="line-separator">
+                <form id="checkout-form">
+                    <!-- INPUT CONTAINER -->
+                    <div class="input-container top-right">
+                        <!-- CHECKBOX -->
+                        <input type="checkbox" id="copy_info1" name="copy_info1" checked="">
+                        <label for="copy_info1" class="label-check">
+                            <span class="checkbox primary"><span></span></span>
+                            Copy info from your profile
+                        </label>
+                        <!-- /CHECKBOX -->
+                    </div>
+                    <!-- /INPUT CONTAINER -->
+
+                    <!-- INPUT CONTAINER -->
+                    <div class="input-container half">
+                        <label for="first_name" class="rl-label required">First Name</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="Enter your first name here...">
+                    </div>
+                    <!-- /INPUT CONTAINER -->
+
+                    <!-- INPUT CONTAINER -->
+                    <div class="input-container half">
+                        <label for="last_name" class="rl-label required">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Enter your last name here...">
+                    </div>
+                    <!-- /INPUT CONTAINER -->
+
+                    <!-- INPUT CONTAINER -->
+                    <div class="input-container">
+                        <label for="company_name" class="rl-label">Contact Number</label>
+                        <input type="text" id="company_name" name="company_name" placeholder="Enter your company name here...">
+                    </div>
+                    <!-- /INPUT CONTAINER -->
+
+                    <!-- INPUT CONTAINER -->
+                    <div class="input-container">
+                        <label for="email_address" class="rl-label required">Email Address</label>
+                        <input type="text" id="email_address" name="email_address" placeholder="Enter your email address here...">
+                    </div>
+                    <!-- /INPUT CONTAINER -->
+
+                    <!-- INPUT CONTAINER -->
+                    <div class="input-container">
+                        <label for="country1" class="rl-label required">Country</label>
+                        <label for="country1" class="select-block">
+                            <select name="country1" id="country1">
+                                <option value="0">Select your Country...</option>
+                                <option value="1">United States</option>
+                                <option value="2">Argentina</option>
+                                <option value="3">Brasil</option>
+                                <option value="4">Japan</option>
+                            </select>
+                            <!-- SVG ARROW -->
+                            <svg class="svg-arrow">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow"></use>
+                            </svg>
+                            <!-- /SVG ARROW -->
+                        </label>
+                    </div>
+                    <!-- /INPUT CONTAINER -->
+
+                    <!-- INPUT CONTAINER -->
+                    <div class="input-container half">
+                        <label for="state_city1" class="rl-label required">State/City</label>
+                        <label for="state_city1" class="select-block">
+                            <select name="state_city1" id="state_city1">
+                                <option value="0">Select your State/City...</option>
+                                <option value="1">New York</option>
+                                <option value="2">Buenos Aires</option>
+                                <option value="3">Brasilia</option>
+                                <option value="4">Tokyo</option>
+                            </select>
+                            <!-- SVG ARROW -->
+                            <svg class="svg-arrow">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow"></use>
+                            </svg>
+                            <!-- /SVG ARROW -->
+                        </label>
+                    </div>
+                    <!-- /INPUT CONTAINER -->
+
+                    <!-- INPUT CONTAINER -->
+                    <div class="input-container half">
+                        <label for="zipcode" class="rl-label required">Zip Code</label>
+                        <input type="text" id="zipcode" name="zipcode" placeholder="Enter your Zip Code here...">
+                    </div>
+                    <!-- /INPUT CONTAINER -->
+
+                    <!-- INPUT CONTAINER -->
+                    <div class="input-container">
+                        <label for="address" class="rl-label required">Full Address</label>
+                        <input type="text" id="address" name="address" placeholder="Enter your address here...">
+                    </div>
+                    <!-- /INPUT CONTAINER -->
+
+                    <!-- INPUT CONTAINER -->
+                    <div class="input-container">
+                        <label for="notes" class="rl-label">Aditional Notes</label>
+                        <textarea id="notes" name="notes" placeholder="Enter aditional notes here..."></textarea>
+                    </div>
+                    <!-- /INPUT CONTAINER -->
+                </form>
+            </div>
+            <!-- /FORM BOX ITEM -->
+
+            <!-- FORM BOX ITEM -->
+            <div class="form-box-item checkout padded">
+                <h4>Pax Information</h4>
+                <hr class="line-separator">
+                <!-- INPUT CONTAINER -->
+                <div class="input-container half">
+                    <label for="first_name2" class="rl-label required">First Name</label>
+                    <input type="text" form="checkout-form" id="first_name2" name="first_name2" placeholder="Enter your first name here...">
+                </div>
+                <!-- /INPUT CONTAINER -->
+
+                <!-- INPUT CONTAINER -->
+                <div class="input-container half">
+                    <label for="last_name2" class="rl-label required">Last Name</label>
+                    <input type="text" form="checkout-form" id="last_name2" name="last_name2" placeholder="Enter your last name here...">
+                </div>
+                <!-- /INPUT CONTAINER -->
+
+                <!-- INPUT CONTAINER -->
+                <div class="input-container">
+                    <label for="company_name2" class="rl-label">Contact Number</label>
+                    <input type="text" form="checkout-form" id="company_name2" name="company_name2" placeholder="Enter your company name here...">
+                </div>
+                <!-- /INPUT CONTAINER -->
+
+                <!-- INPUT CONTAINER -->
+                <div class="input-container">
+                    <label for="email_address2" class="rl-label required">Email Address</label>
+                    <input type="text" form="checkout-form" id="email_address2" name="email_address2" placeholder="Enter your email address here...">
+                </div>
+                <!-- /INPUT CONTAINER -->
+                <div class="input-container">
+                    <!-- CHECKBOX -->
+                    <input type="checkbox" id="same_add" name="same_add" checked="">
+                    <label for="same_add" class="label-check b-label">
+                        <span class="checkbox primary"><span></span></span>
+                        Primary Contact Person
+                    </label>
+                    <!-- /CHECKBOX -->
+                </div>
+                <hr class="line-separator top">
+                <button form="checkout-form" class="button medium tz-color-orange"><i class="icon-plus"></i> Add more</button>
+            </div>
+            <!-- /FORM BOX ITEM -->
+
+            <!-- FORM BOX ITEM -->
+            <!--div class="form-box-item checkout">
+                <h4>Proceed to Payment</h4>
+                <a routerLink="/tour/payment" form="checkout-form" class="button big tz-color-green">Proceed to Payment <i class="icon-arrow-right"></i></a>
+            </div-->
+            <!-- /FORM BOX ITEM -->
+        </div>
+        <!-- /FORM BOX ITEMS -->
+
+        <hr class="line-separator">
+        <br>
+
+        <!-- FORM BOX ITEMS -->
+        <div class="form-box-items">
+
+            <!-- FORM BOX ITEM -->
+            <div class="form-box-item checkout not-padded">
+                <h4>Payment Details</h4>
+                <hr class="line-separator">
+
+                <!-- CART OVERVIEW ITEM -->
+                <div class="cart-overview-item">
+                    <p class="text-header small">Bohol Private Tour Package <span class="primary">x2</span></p>
+                    <p class="price"><span>$</span>120</p>
+                    <p class="category primary">Private Tour Package</p>
+                </div>
+                <!-- /CART OVERVIEW ITEM -->
+
+                <!-- CART TOTAL -->
+                <div class="cart-total small">
+                    <p class="price"><span>$</span>240</p>
+                    <p class="text-header subtotal">Subtotal</p>
+                </div>
+                <!-- /CART TOTAL -->
+
+                <!-- CART TOTAL -->
+                <div class="cart-total small">
+                    <p class="price"><span>$</span>5</p>
+                    <p class="text-header subtotal">Admin Fee</p>
+                </div>
+                <!-- /CART TOTAL -->
+
+                <!-- CART TOTAL -->
+                <div class="cart-total small">
+                    <p class="price"><span>$</span>245</p>
+                    <p class="text-header subtotal">Total</p>
+                </div>
+                <!-- /CART TOTAL -->
+            </div>
+            <!-- /FORM BOX ITEM -->
+
+            <!-- FORM BOX ITEM -->
+            <div class="form-box-item checkout">
+                <h4>Payment &amp; Confirmation</h4>
+                <hr class="line-separator">
+                <label class="rl-label">Choose your Payment Method</label>
+                <!-- RADIO -->
+                <input type="radio" form="checkout-form" id="credit_card" name="payment_method" value="dp" checked>
+                <label for="credit_card" class="linked-radio">
+                    <span class="radio primary"><span></span></span>
+                    DragonPay
+                </label>
+                <!-- /RADIO -->
+                <p class="pm-text credit_card" style="display: block;">DragonPay Info</p>
+
+                <!-- RADIO -->
+                <input type="radio" form="checkout-form" id="paypal" name="payment_method" value="pp">
+                <label for="paypal" class="linked-radio">
+                    <span class="radio primary"><span></span></span>
+                    Paypal
+                </label>
+                <!-- /RADIO -->
+                <p class="pm-text paypal">PayPal Info</p>
+
+                <hr class="line-separator top">
+                <button form="checkout-form" class="button big tz-color-green">Confirm Payment</button>
+            </div>
+            <!-- /FORM BOX ITEM -->
+        </div>
+        <!-- /FORM BOX ITEMS -->
+
+    </div>
+</div>
+<!-- /SECTION -->

@@ -1,0 +1,25 @@
+<form [formGroup]="resetPasswordForm" id="reset-password-form" (ngSubmit)="onSubmit()" class="margin-bot-20">
+  <label for="token" class="rl-label">Reset Code</label>
+  <input type="text" formControlName="token" placeholder="Reset Code" class="form-control" [ngClass]="{ 'invalid': submitted && formControl.token.errors }" />
+  <div *ngIf="submitted && formControl.token.errors" class="invalid-feedback">
+    <span *ngIf="formControl.token.errors.required">Reset code is required</span>
+  </div>
+
+  <label for="password" class="rl-label required">Password</label>
+  <input formControlName="password" type="password" placeholder="Password" class="form-control" [ngClass]="{ 'invalid': submitted && formControl.password.errors }">
+  <div *ngIf="submitted && formControl.password.errors" class="invalid-feedback">
+    <span *ngIf="formControl.password.errors.required">Password is required</span>
+    <span *ngIf="formControl.password.errors.minLength">Password must be 6 - 30 characters</span>
+    <span *ngIf="formControl.password.errors.maxLength">Password must be less than 30 characters</span>
+  </div>
+
+  <p>Request new reset code? <a routerLink="/forgot-password" class="primary">Click here!</a></p>
+  <br>
+  <button class="button mid tz-green">Reset your Password</button>
+</form>
+<div *ngIf="error" class="alert alert-danger" role="alert">
+  {{ error.message }}
+</div>
+<div *ngIf="success" class="alert alert-success" role="alert">
+  {{ success.message }}
+</div>

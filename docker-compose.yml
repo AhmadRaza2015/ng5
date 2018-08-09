@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  spa:
+    container_name: tripzeeker-spa
+    image: tripzeeker/spa
+    volumes:
+      - ./:/app
+      - ./.docker/entrypoint.sh:/entrypoint.sh
+    ports:
+      - '4000:4000'
+    environment:
+      NODE_ENV: development

@@ -1,0 +1,171 @@
+<!-- SIDE MENU -->
+<div id="mobile-menu" class="side-menu left closed">
+  <!-- SVG PLUS -->
+  <svg class="svg-plus">
+    <use xlink:href="#svg-plus"></use>
+  </svg>
+  <!-- /SVG PLUS -->
+
+  <!-- SIDE MENU HEADER -->
+  <div class="side-menu-header">
+    <figure class="logo small">
+      <img src="assets/images/logo.png" alt="logo" width="100">
+    </figure>
+  </div>
+  <!-- /SIDE MENU HEADER -->
+
+  <!-- SIDE MENU TITLE -->
+  <p class="side-menu-title">Main Links</p>
+  <!-- /SIDE MENU TITLE -->
+
+  <!-- DROPDOWN -->
+  <ul class="dropdown dark hover-effect interactive">
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a routerLink="/">Home</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a routerLink="/tour">Tours</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a routerLink="/blog">Blog</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a routerLink="/about">About Us</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+    <!-- DROPDOWN ITEM -->
+    <li class="dropdown-item">
+      <a routerLink="/contact">Contact Us</a>
+    </li>
+    <!-- /DROPDOWN ITEM -->
+
+  </ul>
+  <!-- /DROPDOWN -->
+</div>
+<!-- /SIDE MENU -->
+
+<!-- SIDE MENU -->
+<div id="account-options-menu" *ngIf="(isLoggedIn$ | async)" class="side-menu right closed">
+  <!-- SVG PLUS -->
+  <svg class="svg-plus">
+    <use xlink:href="#svg-plus"></use>
+  </svg>
+  <!-- /SVG PLUS -->
+
+  <!-- SIDE MENU HEADER -->
+  <div class="side-menu-header">
+    <!-- USER QUICKVIEW -->
+    <div class="user-quickview">
+      <!-- USER AVATAR -->
+      <a href="author-profile.html">
+        <div class="outer-ring">
+          <div class="inner-ring"></div>
+          <figure class="user-avatar">
+            <img src="assets/images/profile/klook.png" alt="avatar">
+          </figure>
+        </div>
+      </a>
+      <!-- /USER AVATAR -->
+
+      <!-- USER INFORMATION -->
+      <p class="user-name">Klook</p>
+      <p class="user-money">$800.00</p>
+      <!-- /USER INFORMATION -->
+    </div>
+    <!-- /USER QUICKVIEW -->
+  </div>
+  <!-- /SIDE MENU HEADER -->
+
+  <!-- SIDE MENU TITLE -->
+  <p class="side-menu-title">Your Personal Account</p>
+  <!-- /SIDE MENU TITLE -->
+
+  <!-- DROPDOWN -->
+  <ul class="dropdown dark hover-effect">
+    <li class="dropdown-item">
+      <a routerLink="/user/dashboard">Dashboard</a>
+    </li>
+    <li class="dropdown-item">
+      <a routerLink="/user/account-settings">Account Settings</a>
+    </li>
+    <li class="dropdown-item">
+      <a routerLink="/user/personal-bookings">My Personal Bookings</a>
+    </li>
+  </ul>
+  <!-- /DROPDOWN -->
+
+  <!-- SIDE MENU TITLE -->
+  <p class="side-menu-title">Tour Operator Tools</p>
+  <!-- /SIDE MENU TITLE -->
+
+  <!-- DROPDOWN -->
+  <ul class="dropdown dark hover-effect">
+    <li class="dropdown-item">
+      <a routerLink="/user/create-tour">Create Tour</a>
+    </li>
+    <li class="dropdown-item">
+      <a routerLink="/user/tours">My Tours</a>
+    </li>
+    <li class="dropdown-item">
+      <a routerLink="/user/booking-history">Booking History</a>
+    </li>
+  </ul>
+  <!-- /DROPDOWN -->
+  <button (click)="logout()" class="button medium secondary">Logout</button>
+</div>
+<!-- /SIDE MENU -->
+
+<!-- MAIN MENU -->
+  <div class="main-menu-wrap">
+    <div class="menu-bar">
+      <nav>
+        <ul class="main-menu">
+          <!-- MENU ITEM -->
+          <li class="menu-item">
+            <a routerLink="/">Home</a>
+          </li>
+          <!-- /MENU ITEM -->
+
+          <!-- MENU ITEM -->
+          <li class="menu-item">
+            <a routerLink="/tour">Tours</a>
+          </li>
+          <!-- /MENU ITEM -->
+
+          <!-- MENU ITEM -->
+          <li class="menu-item">
+            <a href="/blog">Blog</a>
+          </li>
+          <!-- /MENU ITEM -->
+
+          <!-- MENU ITEM -->
+          <li class="menu-item">
+            <a routerLink="/about">About Us</a>
+          </li>
+          <!-- /MENU ITEM -->
+
+          <!-- MENU ITEM -->
+          <li class="menu-item">
+            <a routerLink="/contact">Contact Us</a>
+          </li>
+          <!-- /MENU ITEM -->
+        </ul>
+      </nav>
+      <form class="search-form">
+        <input type="text" class="rounded" name="search" id="search_products" placeholder="Search tours & activities...">
+        <input type="image" src="assets/images/search-icon.png" alt="search-icon">
+      </form>
+    </div>
+  </div>
+<!-- /MAIN MENU -->

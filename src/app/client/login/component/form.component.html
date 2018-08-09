@@ -1,0 +1,27 @@
+<div class="form-popup">
+  <!-- FORM POPUP CONTENT -->
+  <div class="form-popup-content">
+    <h4 class="popup-title">Login to your Account</h4>
+    <!-- LINE SEPARATOR -->
+    <hr class="line-separator">
+    <!-- /LINE SEPARATOR -->
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" id="login-form" novalidate class="margin-bot-20">
+      <label for="username" class="rl-label">Username</label>
+      <input formControlName="username" type="text" placeholder="Username" class="form-control">
+      <div *ngIf="loginForm.get('username').hasError('required') && loginForm.get('username').touched" class="invalid-feedback">
+        <span>Username is required</span>
+      </div>
+      <label for="password" class="rl-label">Password</label>
+      <input formControlName="password" type="password" placeholder="Password" class="form-control">
+      <div *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched" class="invalid-feedback">
+        <span>Username is required</span>
+      </div>
+      <p>Forgot your password? <a routerLink="/forgot-password" class="primary">Click here!</a></p>
+      <button [disabled]="loginForm.invalid" class="button mid tz-green">Login <span class="primary">Now!</span></button>
+    </form>
+    <div *ngIf="error" class="alert alert-danger" role="alert">
+      {{ error.message }}
+    </div>
+  </div>
+  <!-- /FORM POPUP CONTENT -->
+</div>

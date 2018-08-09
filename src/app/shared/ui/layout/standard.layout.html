@@ -1,0 +1,110 @@
+<div id="header-wrap">
+  <header>
+    <!-- TODO: navigate to home path -->
+    <a href="/">
+      <figure class="logo">
+        <img src="assets/images/logo.png" alt="logo">
+      </figure>
+    </a>
+
+    <!-- MOBILE MENU HANDLER -->
+    <div class="mobile-menu-handler left primary">
+        <img src="assets/images/pull-icon.png" alt="pull-icon">
+    </div>
+    <!-- /MOBILE MENU HANDLER -->
+
+    <!-- LOGO MOBILE -->
+    <a href="/">
+      <figure class="logo-mobile">
+        <img src="assets/images/logo_mobile.png" alt="logo-mobile">
+      </figure>
+    </a>
+    <!-- /LOGO MOBILE -->
+
+    <!-- MOBILE ACCOUNT OPTIONS HANDLER -->
+    <div class="mobile-account-options-handler right secondary">
+      <span class="icon-user"></span>
+    </div>
+    <!-- /MOBILE ACCOUNT OPTIONS HANDLER -->
+
+    <!-- TODO: Hide this when logged in -->
+    <div class="user-board" *ngIf="!(isLoggedIn$ | async)">
+      <div class="account-actions">
+        <a routerLink="/register" class="button primary tz-color-orange">Register</a>
+        <a routerLink="/login" class="button secondary tz-color-green">Login</a>
+      </div>
+    </div>
+
+    <!-- Show if logged in.-->
+    <div class="user-board" *ngIf="(isLoggedIn$ | async)">
+
+      <div class="user-quickview">
+        <!-- USER AVATAR -->
+        <a href="author-profile.html">
+          <div class="outer-ring">
+            <div class="inner-ring"></div>
+            <figure class="user-avatar">
+              <img src="assets/images/profile/klook.png" alt="avatar">
+            </figure>
+          </div>
+        </a>
+        <!-- /USER AVATAR -->
+
+        <!-- USER INFORMATION -->
+        <p class="user-name">Klook</p>
+        <!-- SVG ARROW -->
+        <svg class="svg-arrow">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow"></use>
+        </svg>
+        <!-- /SVG ARROW -->
+        <p class="user-money">$853</p>
+        <!-- /USER INFORMATION -->
+
+        <!-- DROPDOWN -->
+        <ul class="dropdown small hover-effect closed">
+          <li class="dropdown-item">
+            <a routerLink="/user/dashboard">Dashboard</a>
+          </li>
+          <li class="dropdown-item">
+            <a routerLink="/user/account-settings">Account Settings</a>
+          </li>
+          <li class="dropdown-item">
+            <a routerLink="/user/personal-bookings">My Personal Bookings</a>
+          </li>
+          <li class="dropdown-item">
+            <a routerLink="/user/create-tour">Create Tour</a>
+          </li>
+          <li class="dropdown-item">
+            <a routerLink="/user/tours">My Tours</a>
+          </li>
+          <li class="dropdown-item">
+            <a routerLink="/user/booking-history">Booking History</a>
+          </li>
+        </ul>
+        <!-- /DROPDOWN -->
+      </div>
+
+      <div class="account-actions">
+        <button (click)="logout()" class="button secondary tz-color-green">Logout</button>
+      </div>
+    </div>
+
+  </header>
+
+  <app-main-navbar></app-main-navbar>
+
+  <router-outlet></router-outlet>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <!-- FOOTER BOTTOM -->
+  <div id="footer-bottom-wrap">
+    <div id="footer-bottom">
+      <p>Copyright © 2018 TripZeeker Inc., All Rights Reserved.</p>
+    </div>
+  </div>
+  <!-- /FOOTER BOTTOM -->
+</footer>
+<!-- /FOOTER -->
+

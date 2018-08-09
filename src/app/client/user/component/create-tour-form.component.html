@@ -1,0 +1,129 @@
+<form [formGroup]="createTourForm" (ngSubmit)="onSubmit()" id="create-tour-form" novalidate>
+
+<!--Content-->
+<div class="form-box-items">
+  <!-- FORM BOX ITEM -->
+  <div class="form-box-item">
+      <h4>General</h4>
+      <hr class="line-separator">
+
+
+    <!-- INPUT CONTAINER -->
+    <div class="input-container">
+      <label for="title" class="rl-label required">Title</label>
+      <input type="text" formControlName="title" class="form-control">
+      <div *ngIf="createTourForm.get('title').hasError('required') && createTourForm.get('title').touched" class="invalid-user-feedback">
+        <span>Title is required</span>
+      </div>
+    </div>
+    <!-- /INPUT CONTAINER -->
+
+    <!-- INPUT CONTAINER -->
+    <div formGroupName="details" class="input-container">
+      <label class="rl-label required" for="description">Tour Details</label>
+      <textarea formControlName="description" class="form-control" placeholder="Tour Details"></textarea>
+      <div *ngIf="createTourForm.get('details.description').hasError('required') && createTourForm.get('details.description').touched" class="invalid-user-feedback">
+        <span>Details is required</span>
+      </div>
+    </div>
+    <!-- /INPUT CONTAINER -->
+
+    <!-- INPUT CONTAINER -->
+    <div formGroupName="details" class="input-container">
+      <label for="shortDescription" class="rl-label required">Short Description</label>
+      <input type="text" formControlName="shortDescription" class="form-control">
+      <div *ngIf="createTourForm.get('details.shortDescription').hasError('required') && createTourForm.get('details.shortDescription').touched" class="invalid-user-feedback">
+        <span>Short Description is required</span>
+      </div>
+    </div>
+    <!-- /INPUT CONTAINER -->
+
+    <!-- INPUT CONTAINER -->
+    <div class="input-container">
+      <label for="price" class="rl-label required">Price</label>
+      <input type="number" formControlName="price" class="form-control" placeholder="Enter amount">
+      <div *ngIf="createTourForm.get('price').hasError('required') && createTourForm.get('price').touched" class="invalid-user-feedback">
+        <span>Price is required</span>
+      </div>
+    </div>
+    <!-- /INPUT CONTAINER -->
+
+    <div class="input-container">
+      <button [disabled]="createTourForm.invalid" class="button mid primary spaced">Save Tour</button>
+    </div>
+    <hr class="line-separator">
+
+    </div>
+
+    <!-- /FORM BOX ITEM -->
+
+    <!-- FORM BOX ITEM -->
+    <div class="form-box-item">
+        <h4>Tour Image</h4>
+        <hr class="line-separator">
+
+        <!-- PROFILE IMAGE UPLOAD -->
+        <div class="profile-image">
+            <div class="profile-image-data">
+                <figure class="user-avatar medium">
+                    <img src="assets/images/dashboard/profile-default-image.png" alt="profile-default-image">
+                </figure>
+                <p class="text-header">Thumbnail Image</p>
+                <p class="upload-details">Browse thumbnail image not more than 2MB</p>
+            </div>
+        </div>
+        <!-- PROFILE IMAGE UPLOAD -->
+        <div class="input-container">
+            <a href="#" class="button mid tz-color-orange spaced"><i class="icon-picture"></i> Browse Image</a>
+        </div>
+
+        <hr class="line-separator">
+
+        <h4>Available Dates</h4>
+        <hr class="line-separator">
+
+        <div formArrayName="tourDates">
+          <div *ngFor="let tourDate of createTourForm.get('tourDates'); let j=index">
+              <div [formGroupName]="j">
+                  <div class="input-container">
+                    <input appDatePicker type="text" formControlName="dateFrom" class="form-control" placeholder="Enter date from">
+                    <div *ngIf=
+                      "createTourForm.get('tourDates').controls[j].get('dateFrom').hasError('required') && createTourForm.get('tourDates').controls[j].get('dateFrom').touched" class="invalid-user-feedback">
+                      <span>Date from is required.</span>
+                    </div>
+                  </div>
+                  <div class="input-container">
+                    <input appDatePicker formControlName="dateTo" type="text" class="form-control" placeholder="Enter date to">
+                    <div *ngIf="createTourForm.get('tourDates').controls[j].get('dateTo').hasError('required') && createTourForm.get('tourDates').controls[j].get('dateTo').touched" class="invalid-user-feedback">
+                      <span>Date to is required.</span>
+                    </div>
+                  </div>
+                  <hr />
+              </div>
+          </div>
+        </div>
+
+        <!-- INPUT CONTAINER -->
+        <!-- <div class="input-container">
+            <input form="profile-info-form" type="text" id="date_from" name="date_from" value="" placeholder="Date From">
+        </div> -->
+        <!-- /INPUT CONTAINER -->
+
+        <!-- INPUT CONTAINER -->
+        <!-- <div class="input-container">
+            <input form="profile-info-form" type="text" id="date_from" name="date_from" value="" placeholder="Date To">
+        </div> -->
+        <!-- /INPUT CONTAINER -->
+
+        <div class="input-container half" style="margin-top: 20px;">
+            <a href="#" class="button mid dark spaced"><i class="icon-minus"></i> Remove</a>
+        </div>
+        <div class="input-container half" style="margin-top: 20px;">
+            <button (click)="addAvailableDate()" type="button" class="button mid tz-color-orange spaced"><i class="icon-plus"></i> Add more</button>
+        </div>
+    </div>
+    <!-- /FORM BOX ITEM -->
+
+  </div>
+  <!--Content-->
+</form>
